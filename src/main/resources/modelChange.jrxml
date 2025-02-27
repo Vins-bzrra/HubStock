@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ItemChangeReport" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="39c95b04-1148-475c-8b62-65acf21cacb5">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="startDate" class="java.lang.String"/>
+	<parameter name="endDate" class="java.lang.String"/>
+	<field name="id" class="java.lang.Long"/>
+	<field name="patrimonyItem" class="java.lang.String"/>
+	<field name="attributeName" class="java.lang.String"/>
+	<field name="oldValue" class="java.lang.String"/>
+	<field name="newValue" class="java.lang.String"/>
+	<field name="userRegistration" class="java.lang.String"/>
+	<field name="userName" class="java.lang.String"/>
+	<field name="changeDateTime" class="java.time.LocalDateTime"/>
+	<title>
+		<band height="40">
+			<staticText>
+				<reportElement x="-20" y="0" width="842" height="40" uuid="a933003d-ec67-4576-9949-5695f6be87db"/>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HISTÓRICO DE ALTERAÇÕES]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="50">
+			<textField>
+				<reportElement x="-20" y="0" width="842" height="50" uuid="b1e7a82a-3248-49bd-a3f2-49b4922696ea"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Relatório referente às alterações realizadas no período de " + $P{startDate} + " a " + $P{endDate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="30">
+			<staticText>
+				<reportElement x="20" y="0" width="20" height="20" uuid="879ff838-9ce5-4045-9585-1a0278791bdb">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="0" width="80" height="20" uuid="879ff838-9ce5-4045-9585-1a0278791bdb">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<text><![CDATA[Patrimônio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="0" width="90" height="20" uuid="42fd7c37-23b3-4d91-874f-4e66da14e5b5">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<text><![CDATA[Atributo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="210" y="0" width="145" height="20" uuid="598e4273-a992-4cbd-9088-cc51bb7d1897">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<text><![CDATA[Valor Anterior]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="355" y="0" width="145" height="20" uuid="eda4a2c0-0109-4196-b0b8-4c16e36f9edc">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<text><![CDATA[Novo Valor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="0" width="80" height="20" uuid="4629e050-87ad-42c8-a52e-884e97b344de"/>
+				<text><![CDATA[Matrícula]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="580" y="0" width="100" height="20" uuid="e56cb933-7e7a-4ca2-b5eb-ef28f7067d3c">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<text><![CDATA[Usuário]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="680" y="0" width="80" height="20" uuid="77397716-1626-4114-bfc0-dab4a3afd200">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<text><![CDATA[Data de Alteração]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<textField>
+				<reportElement x="20" y="0" width="20" height="20" uuid="be0b38f7-4770-4b1b-b108-4bf7646f7be5">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="0" width="80" height="20" uuid="076b5e6b-d1e5-47db-8928-176570daf563"/>
+				<textFieldExpression><![CDATA[$F{patrimonyItem}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="0" width="90" height="20" uuid="57a721c7-b88b-4343-81cb-cebfbbdd5623"/>
+				<textFieldExpression><![CDATA[$F{attributeName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="210" y="0" width="145" height="20" uuid="cb873e77-ddcf-4761-a98f-d015dd89d556">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{oldValue}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="355" y="0" width="145" height="20" uuid="07be2c8c-d5b6-477d-8b89-fc09fa96258e">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{newValue}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="500" y="0" width="80" height="20" uuid="2caa4283-0c6b-4b6b-9fb8-5c18c4cb49b7"/>
+				<textFieldExpression><![CDATA[$F{userRegistration}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="580" y="0" width="100" height="20" uuid="b84c3afe-9b3d-454a-93f2-99a0aa142aed"/>
+				<textFieldExpression><![CDATA[$F{userName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="680" y="0" width="80" height="20" uuid="db0c98f1-7a30-41a6-8670-53d9451014b1"/>
+				<textFieldExpression><![CDATA[new java.time.format.DateTimeFormatterBuilder().appendPattern("dd-MM-yyyy").toFormatter().format($F{changeDateTime})]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
