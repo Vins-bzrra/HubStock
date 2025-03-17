@@ -1,18 +1,18 @@
 
-<h1>InveGo</h1> 
+<h1>HubStock</h1> 
 
 ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 
-O InveGo API foi desenvolvido para auxiliar no gerenciamento de inventário da sua empresa.
+O HubStock API foi desenvolvido para auxiliar no gerenciamento de inventário da sua empresa.
 
 ## 🔨 Funcionalidades do projeto
 A API realiza o cadastro, transferência e pesquisa de itens. Além de opções para realizar baixa do item e geração de relatórios de movimentação e de alteração para auditoria.
 
 ## 📁 Acesso ao projeto
 
-Você pode [acessar o código fonte do projeto inicial](https://github.com/Vins-bzrra/InveGo) ou [baixá-lo](https://github.com/vins-bzrra/InveGo/archive/refs/heads/main.zip).
+Você pode [acessar o código fonte do projeto inicial](https://github.com/Vins-bzrra/HubStock) ou [baixá-lo](https://github.com/vins-bzrra/HubStock/archive/refs/heads/main.zip).
 
 ## 🛠️ Abrir e rodar o projeto
 
