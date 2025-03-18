@@ -1,10 +1,10 @@
-FROM maven:3.9.9-amazoncorretto-23-al2023 AS build
+FROM maven:3.9.9-amazoncorretto-21-al2023 AS build
 WORKDIR /app
 COPY . .
 RUN mvn clean package -DskipTests
 
 
-FROM openjdk:23
+FROM openjdk:21
 
 WORKDIR /app
 
